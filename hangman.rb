@@ -44,10 +44,10 @@ class Hangman
   end
 
   def do_turn
-    puts "Gimme a fucking guess:"
+    puts "Take a guess:"
     guess = gets.chomp.downcase
     while @guessed.include?(guess)
-      puts "You used that one already asshat"
+      puts "You used that one already"
       guess = gets.chomp.downcase
     end
     @guessed << guess 
@@ -65,7 +65,7 @@ class Hangman
       end
       puts @game_sentence.puzzle.join(" ")
       puts "You have already guessed: #{@guessed.join(" ")}"
-      puts "You have #{@tries} tries motherfucker!"
+      puts "You have #{@tries} tries"
       if do_turn
         puts "Good guess!"
         next
@@ -95,7 +95,7 @@ class Hangman
   end
     
   def continue?
-    puts "Another you bitch? (y/n)"
+    puts "Another? (y/n)"
     choice = gets.chomp.downcase
     if choice == "y"
       reset
