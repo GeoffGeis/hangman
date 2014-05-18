@@ -81,6 +81,12 @@ class Words
     noun << "rain"
     noun << "name"
     noun << "train"
-    "#{name.sample} is a #{adjective.sample} #{noun.sample}"
+    @name = name
+    @adjective = adjective
+    @noun = noun
+  end
+
+  def sentence
+    "#{@name.sample} is a #{@adjective.sample} #{@noun.sample}"
   end
 end

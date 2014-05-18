@@ -1,17 +1,18 @@
-require './words/words.rb'; './sentence/sentence.rb'
+require './words/words.rb'
+require './sentence/sentence.rb'
 
 class Hangman
   def do_game
     d = Words.new
-    @game_sentence = Sentence.new(d)
-    guessed = []
+    @game_sentence = Sentence.new(d.sentence)
+    @guessed = []
     tries = 6
     while tries != 0
       if win?
         break
       end
       puts @game_sentence.puzzle.join(" ")
-      puts "You have already guessed: #{guessed.join(" ")}"
+      puts "You have already guessed: #{@guessed.join(" ")}"
       puts "You have #{tries} tries motherfucker!"
       if do_turn
         puts "Good guess!"
@@ -44,11 +45,11 @@ class Hangman
   def do_turn
     puts "Gimme a fucking guess:"
     guess = gets.chomp.downcase
-    while guessed.include?(guess)
+    while @guessed.include?(guess)
       puts "You used that one already asshat"
       guess = gets.chomp.downcase
     end
-    guessed << guess 
+    @guessed << guess 
     if check_guess(guess)
       true
     else
