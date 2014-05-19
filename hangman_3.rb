@@ -5,12 +5,12 @@ class Hangman
   def initialize
     w = Words.new
     @game_sentence = Sentence.new(w.sentence)
+    @guessed = []
     tries = 6
     while tries != 0
       if win?
         break
       end
-      @guessed = []
       puts @game_sentence.puzzle.join(" ")
       puts "You have already guessed: #{@guessed.join(" ")}"
       puts "You have #{tries} tries"
