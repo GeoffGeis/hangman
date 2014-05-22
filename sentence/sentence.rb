@@ -3,10 +3,6 @@ class Sentence
   
   def initialize(sentence)
     @searchable_sentence = sentence.split('')
-    blank_out
-  end
-  
-  def blank_out
     @puzzle = @searchable_sentence.map { |char| char == " " ? " " : "_" }
   end
 
