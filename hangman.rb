@@ -44,11 +44,7 @@ class Hangman
       guess = gets.chomp.downcase
     end
     @guessed << guess 
-    if check_guess(guess)
-      true
-    else
-      false
-    end
+    check_guess(guess) ? true : false
   end
 
   def check_guess(guess)  
@@ -64,9 +60,7 @@ class Hangman
   def continue?
     puts "Another? (y/n)"
     choice = gets.chomp.downcase
-    if choice == "y"
-      initialize
-    end
+    initialize if choice == "y"
   end
 end
 
