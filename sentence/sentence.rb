@@ -1,4 +1,4 @@
-require './words/words.rb'
+require './sentence/words/words.rb'
 
 class Sentence
   attr_reader(:puzzle, :searchable_sentence)
