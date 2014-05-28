@@ -4,28 +4,28 @@ class Words
   end
 
   def name
-    name = ["sophia", "aiden", "emma", "jackson", "olivia", 
-    "ethan", "isabella", "liam", "ava", "mason", "lily",
-    "noah", "zoe", "lucas", "chloe", "jacob", "mia", 
-    "jayden", "madison", "jack", "emily", "logan",
-    "ella", "ryan", "madelyn", "george"].sample
+    ["sophia", "aiden", "emma", "jackson", "olivia", "ethan",
+    "isabella", "liam", "ava", "mason", "lily", "noah",
+    "zoe", "lucas", "chloe", "jacob", "mia", "jayden",
+    "madison", "jack", "emily", "logan", "ella",
+    "ryan", "madelyn", "george"].sample
   end
 
   def adjective
-    adjective = ["adorable", "beautiful", "clean", "dark", "elegant",
-    "fancy", "glamorous", "handsome", "light", "magnificent",
-    "plain", "quaint", "shiny", "ugly", "angry", "bad", 
-    "clumsy", "creepy",  "dangerous", "embarrassed",
-    "fierce", "grumpy", "itchy", "jittery", 
-    "nasty", "crafty"].sample
+    ["adorable", "beautiful", "clean", "dark", "elegant", "fancy",
+    "glamorous", "handsome", "light", "magnificent", "plain",
+    "quaint", "shiny", "ugly", "angry", "bad", "clumsy",
+    "creepy",  "dangerous", "embarrassed", "fierce",
+    "grumpy", "itchy", "jittery", "nasty",
+    "crafty"].sample
   end
 
   def noun
-    noun = ["equipment", "screwdriver", "vegetable", "badge", "bead",
-    "sun", "flame", "flower", "gate", "pharmacist", "weapon",
-    "milkshake", "letter", "servant", "room", "nation", 
-    "river", "crack", "base", "mountain", "committee",
-    "ray", "blood", "rain", "name", "train"].sample
+    ["equipment", "screwdriver", "vegetable", "badge", "bead", "sun",
+    "flame", "flower", "gate", "pharmacist", "weapon", "milkshake",
+    "letter", "servant", "room", "nation", "river", "crack",
+    "base", "mountain", "committee", "ray", "blood",
+    "rain", "name", "train"].sample
   end
 
   def sentence
