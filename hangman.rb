@@ -1,4 +1,3 @@
-require './words/words.rb'
 require './sentence/sentence.rb'
 
 class Hangman

@@ -81,12 +81,12 @@ class Words
     noun << "rain"
     noun << "name"
     noun << "train"
-    @name = name
-    @adjective = adjective
-    @noun = noun
+    @name = name.sample
+    @adjective = adjective.sample
+    @noun = noun.sample
   end
 
   def sentence
-    "#{@name.sample} is a #{@adjective.sample} #{@noun.sample}"
+    "#{@name} is a #{@adjective} #{@noun}".split('')
   end
 end
