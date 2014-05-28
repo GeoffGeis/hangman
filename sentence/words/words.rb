@@ -87,6 +87,10 @@ class Words
   end
 
   def sentence
-    "#{@name} is a #{@adjective} #{@noun}".split('')
+    if ['a', 'e', 'i', 'o', 'u'].include?(@adjective[0])
+      "#{@name} is an #{@adjective} #{@noun}".split('')
+    else
+      "#{@name} is a #{@adjective} #{@noun}".split('')
+    end
   end
 end
