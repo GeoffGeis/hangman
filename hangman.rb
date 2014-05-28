@@ -3,14 +3,13 @@ require './sentence/sentence.rb'
 
 class Hangman
   def initialize
-    w = Words.new
-    @game_sentence, @guessed, @tries = Sentence.new(w.sentence), [], 6
+    @game_sentence, @guessed, @tries = Sentence.new, [], 6
     do_game
   end
     
   def do_game
     while @tries != 0
-      unless @game_sentence.puzzle.join(" ").include?("_")
+      unless @game_sentence.puzzle.include?("_")
         break
       end
       puts @game_sentence.puzzle.join(" ")
@@ -26,11 +25,11 @@ class Hangman
       end
     end
     if @tries == 0
-      puts @game_sentence.searchable_sentence.join(" ")
+      puts @game_sentence.searchable_sentence.sentence.join(' ')
       puts "Game over man....game over!"
       continue?
     else
-      puts @game_sentence.puzzle.join(" ")
+      puts @game_sentence.puzzle
       puts "Good jerb, you are teh winRAR!"
       continue?
     end
