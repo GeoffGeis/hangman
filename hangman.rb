@@ -28,7 +28,7 @@ class Hangman
       puts "Game over man....game over!"
       continue?
     else
-      puts @game_sentence.puzzle
+      puts @game_sentence.searchable_sentence.sentence.join(' ')
       puts "Good jerb, you are teh winRAR!"
       continue?
     end
